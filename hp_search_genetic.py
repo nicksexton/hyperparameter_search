@@ -401,12 +401,4 @@ if __name__ == "__main__":
     dc_data = import_dc_data()
 
     # create a dataframe by running eval_n_models
-    eval_df = eval_n_models(dc_data, n=20, generation=0)
-
-    # test running the model on params from the original 5
-    # eval_df_1 = eval_n_models(dc_data, n=5, generation=1, init='hparams',
-    #                          hparams=get_hparams_from_dataframe(eval_df))
-
-    params = ga_calc_next_gen(eval_df, generation_size=len(eval_df))
-
-    eval_df_1 = ga_run_generation(eval_df, dc_data, n_generations=3, generation_size=8)
+    df_genetic = ga_run(dc_data, generation_size=20, n_generations=10)
