@@ -11,5 +11,5 @@ Uses the Tox21 dataset from [deepchem](https://github.com/deepchem/deepchem). Fo
 
 It's a rough proof of concept, as it is there's a lot of code redundancy for each of the different hyperparameters, which is slow and a bit error-prone. To make it more generally useful it needs an object-oriented reimplementation where each hyperparameter gets its own class, and `hyperparams` is a dictionary containing all hyperparameter classes.
 
-
+Would also probably be better (and more pythonic) if implemented as an iterable, so you could just compute another generation by calling .next()
 
